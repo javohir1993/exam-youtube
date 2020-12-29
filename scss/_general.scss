@@ -1,0 +1,29 @@
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: "Mulish", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  background-color: #fff;
+  color: #C2C2C2;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
