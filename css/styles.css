@@ -656,6 +656,11 @@ img {
   padding-left: 30px;
 }
 
+.main-content__main-section {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
 .sitenav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -851,6 +856,10 @@ img {
   }
 }
 
+.channel {
+  margin-bottom: 50px;
+}
+
 .channel__heading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -858,6 +867,8 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0;
+  margin-bottom: 30px;
   font-size: 26px;
   line-height: 33px;
   color: #19202C;
@@ -868,7 +879,136 @@ img {
   width: 50px;
   height: 50px;
   margin-right: 20px;
+  border-radius: 50%;
   background-image: url("../img/dolli-blair-img.jpg");
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  background-position: center center;
+}
+
+.channel__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.channel__item {
+  position: relative;
+  z-index: 1;
+  margin-right: 40px;
+}
+
+.channel__watch-later-button {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  width: 33px;
+  height: 33px;
+  top: 10px;
+  right: 10px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/arrow-circle-down.svg");
+  background-repeat: no-repeat;
+  background-size: 33px 33px;
+  background-position: center center;
+  cursor: pointer;
+  outline: none;
+}
+
+.channel__item:hover .channel__watch-later-button {
+  display: block;
+}
+
+.channel__link {
+  font-size: 13px;
+  line-height: 16px;
+  color: #C2C2C2;
+  text-decoration: none;
+}
+
+.channel__demo-wrapper {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 10px;
+}
+
+.channel__demo-wrapper::before {
+  position: absolute;
+  z-index: 1;
+  content: "4:15";
+  bottom: 10px;
+  right: 10px;
+  width: 47px;
+  height: 24px;
+  padding: 3px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  border-radius: 12px;
+}
+
+.channel__demo-img {
+  display: block;
+  border-radius: 14px;
+}
+
+.channel__item-heading {
+  margin: 0;
+  margin-bottom: 4px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #19202C;
+}
+
+.channel__item-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.channel__item-info-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.channel__item-views {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+}
+
+.channel__item-views::after {
+  content: "";
+  width: 2px;
+  height: 2px;
+  margin-right: 5px;
+  margin-left: 5px;
+  background-color: #C2C2C2;
+}
+
+.channel__item-uploaded {
+  margin: 0;
+}
+
+.channel__name {
+  margin: 0;
+  font-weight: normal;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
