@@ -829,4 +829,51 @@ img {
 .sitenav__subscriptions-link:hover {
   color: rgba(255, 0, 0, 0.5);
 }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .sitenav__subscriptions-item--gussie::before {
+    background-image: url("../img/gusiie-img@2x.jpg");
+  }
+  .sitenav__subscriptions-item--nora::before {
+    background-image: url("../img/nora-img@2x.jpg");
+  }
+  .sitenav__subscriptions-item--belle::before {
+    background-image: url("../img/belle-img@2x.jpg");
+  }
+  .sitenav__subscriptions-item--eunice::before {
+    background-image: url("../img/eunice-img@2x.jpg");
+  }
+  .sitenav__subscriptions-item--emma::before {
+    background-image: url("../img/emma-img@2x.jpg");
+  }
+  .sitenav__subscriptions-item--leah::before {
+    background-image: url("../img/leah-img@2x.jpg");
+  }
+}
+
+.channel__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 26px;
+  line-height: 33px;
+  color: #19202C;
+}
+
+.channel__heading::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  background-image: url("../img/dolli-blair-img.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .channel__heading::before {
+    background-image: url("../img/dolli-blair-img@2x.jpg");
+  }
+}
 /*# sourceMappingURL=styles.css.map */

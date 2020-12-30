@@ -1,0 +1,25 @@
+.channel__heading {
+  display: flex;
+  align-items: center;
+  font-size: 26px;
+  line-height: 33px;
+  color: $color-heading;
+
+  &::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    background-image: url("../img/dolli-blair-img.jpg");
+  }
+}
+
+
+
+@include retina-bg {
+  .channel__heading {
+    &::before {
+      background-image: url("../img/dolli-blair-img@2x.jpg");
+    }
+  }
+}

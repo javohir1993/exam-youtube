@@ -145,3 +145,32 @@
     color: rgba(255, 0, 0, 0.5);
   }
 }
+
+
+@include retina-bg {
+  .sitenav__subscriptions-item {
+    &--gussie::before {
+      background-image: url("../img/gusiie-img@2x.jpg");
+    }
+
+    &--nora::before {
+      background-image: url("../img/nora-img@2x.jpg");
+    }
+
+    &--belle::before {
+      background-image: url("../img/belle-img@2x.jpg");
+    }
+
+    &--eunice::before {
+      background-image: url("../img/eunice-img@2x.jpg");
+    }
+
+    &--emma::before {
+      background-image: url("../img/emma-img@2x.jpg");
+    }
+
+    &--leah::before {
+      background-image: url("../img/leah-img@2x.jpg");
+    }
+  }
+}
