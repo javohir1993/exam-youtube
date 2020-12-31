@@ -1,8 +1,11 @@
 .sitenav {
   display: flex;
   flex-direction: column;
-  width: 160px;
-  margin-right: 66px;
+  width: 320px;
+  height: 83vh;
+  padding-top: 25px;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .sitenav__list {
@@ -25,7 +28,7 @@
 }
 
 .sitenav__link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   text-decoration: none;
 }
@@ -143,6 +146,13 @@
 
   &:hover {
     color: rgba(255, 0, 0, 0.5);
+  }
+}
+
+
+@include breakpoint-down (600) {
+  .sitenav {
+    display: none;
   }
 }
 

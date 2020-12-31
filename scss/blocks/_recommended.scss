@@ -1,83 +1,26 @@
-.channel {
+.recommended {
   position: relative;
   z-index: 1;
   margin-bottom: 50px;
 }
 
-.channel__recommended-top {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
-
-  &::before {
-    content: "";
-    width: 50px;
-    height: 50px;
-    margin-right: 20px;
-    border-radius: 50%;
-    background-image: url("../img/food-drink-logo.png");
-    background-repeat: no-repeat;
-    background-size: 50px 50px;
-    background-position: center center;
-  }
-}
-
-.channel__heading {
-  display: flex;
-  align-items: center;
+.recommended__heading {
   margin: 0;
   margin-bottom: 30px;
   font-size: 26px;
   line-height: 33px;
   color: $color-heading;
-
-  &::before {
-    content: "";
-    width: 50px;
-    height: 50px;
-    margin-right: 20px;
-    border-radius: 50%;
-    background-image: url("../img/dolli-blair-img.jpg");
-    background-repeat: no-repeat;
-    background-size: 50px 50px;
-    background-position: center center;
-  }
 }
 
-.channel__recommended-heading {
-  margin-right: 20px;
-  margin-bottom: 0;
-  &::before {
-    display: none;
-  }
-}
-
-.channel__recommended-description {
-  margin: 0;
-  margin-bottom: -10px;
-}
-
-.channel__list-controller-button-wrapper {
+.recommended__list-controller-button-wrapper {
   position: absolute;
   z-index: 1;
-  top: 11%;
+  top: 4%;
   right: 9.74%;
   display: flex;
-  align-items: center;
 }
 
-.channel__recommended-subscribe-button {
-  margin-right: 40px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 20px;
-  background-color: #FF0000;
-  color: #fff;
-  cursor: pointer;
-  outline: none;
-}
-
-.channel__list-controller-button {
+.recommended__list-controller-button {
   width: 30px;
   height: 30px;
   padding: 0;
@@ -112,19 +55,19 @@
   }
 }
 
-.channel__list {
+.recommended__list {
   @include reset-list;
   display: flex;
 }
 
-.channel__item {
+.recommended__item {
   position: relative;
   z-index: 1;
   flex-shrink: 0;
   margin-right: 40px;
 }
 
-.channel__watch-later-button {
+.recommended__watch-later-button {
   display: none;
   position: absolute;
   z-index: 2;
@@ -144,32 +87,32 @@
   outline: none;
 }
 
-.channel__item:hover .channel__watch-later-button {
+.recommended__item:hover .recommended__watch-later-button {
   display: block;
 }
 
-.channel__watch-later-text {
+.recommended__watch-later-text {
   display: none;
 }
 
-.channel__watch-later-button:hover .channel__watch-later-text {
+.recommended__watch-later-button:hover .recommended__watch-later-text {
   display: block;
 }
 
-.channel__link {
+.recommended__link {
   font-size: 13px;
   line-height: 16px;
   color: $color-primary;
   text-decoration: none;
 }
 
-.channel__demo-wrapper {
+.recommended__demo-wrapper {
   position: relative;
   z-index: 1;
   margin-bottom: 10px;
 }
 
-.channel__demo-time {
+.recommended__demo-time {
   position: absolute;
   z-index: 1;
   bottom: 10px;
@@ -181,14 +124,14 @@
   border-radius: 12px;
 }
 
-.channel__demo-img {
+.recommended__demo-img {
   display: block;
-  width: 250px;
-  height: 150px;
+  width: 540px;
+  height: 250px;
   border-radius: 14px;
 }
 
-.channel__item-heading {
+.recommended__item-heading {
   margin: 0;
   margin-bottom: 5px;
   font-size: 16px;
@@ -196,17 +139,17 @@
   color: $color-heading;
 }
 
-.channel__item-info {
+.recommended__item-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.channel__item-info-left {
+.recommended__item-info-left {
   display: flex;
 }
 
-.channel__item-views {
+.recommended__item-views {
   display: flex;
   align-items: center;
   margin: 0;
@@ -221,26 +164,26 @@
   }
 }
 
-.channel__item-uploaded {
+.recommended__item-uploaded {
   margin: 0;
 }
 
-.channel__name {
+.recommended__name {
   margin: 0;
   font-weight: normal;
 }
 
 
 @include breakpoint-down (1000) {
-  .channel__list-controller-button-wrapper {
+  .recommended__list-controller-button-wrapper {
     display: none;
   }
 
-  .channel__list {
+  .recommended__list {
     flex-wrap: wrap;
   }
 
-  .channel__item {
+  .recommended__item {
     flex-shrink: 1;
     margin-bottom: 30px;
   }
@@ -249,15 +192,9 @@
 
 
 @include retina-bg {
-  .channel__heading {
+  .recommended__heading {
     &::before {
       background-image: url("../img/dolli-blair-img@2x.jpg");
-    }
-  }
-
-  .channel__recommended-top {
-    &::before {
-      background-image: url("../img/food-drink-logo@2x.png");
     }
   }
 }

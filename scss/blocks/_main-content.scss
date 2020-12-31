@@ -1,10 +1,26 @@
 .main-content {
   display: flex;
   flex-grow: 1;
-  padding-top: 25px;
   padding-left: 30px;
 }
 
 .main-content__main-section {
-  flex-shrink: 0;
+  width: 100%;
+  height: 100vh;
+  padding-top: 25px;
+  padding-bottom: 150px;
+  padding-left: 66px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+@include breakpoint-down (600) {
+  .main-content__main-section {
+    display: inline-flex;
+    flex-direction: column;
+    width: auto;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px 16px;
+  }
 }

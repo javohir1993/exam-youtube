@@ -1,0 +1,28 @@
+.site-footer {
+  position: fixed;
+  z-index: 10000;
+  bottom: 15px;
+  left: 30px;
+}
+
+.site-footer__settings-button {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  color: $color-primary;
+  cursor: pointer;
+  outline: none;
+
+  &::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    background-image: url("../img/settings-icon.svg");
+  }
+
+  &:hover {
+    color: rgba(255, 0, 0, 0.5);;
+  }
+}
