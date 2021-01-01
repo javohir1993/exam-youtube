@@ -10,7 +10,7 @@
 
   <header class="site-header">
 
-    <button class="site-header__hamburger-button" type="button" aria-label="Toggler navigation"></button>
+    <button class="site-header__hamburger-button js-site-header__hamburger-button" type="button" aria-label="Toggler navigation"></button>
 
     <a class="site-header__logo" href="index.html">
       <img class="site-header__logo-img" src="img/youtube-logo.svg" alt="YouTube logo" width="116" height="25">
@@ -39,7 +39,7 @@
 
   </header>
 
-  <main class="main-content">
+  <main class="main-content js-main-content">
 
     <nav class="sitenav">
       <ul class="sitenav__list">
@@ -143,7 +143,7 @@
           <button class="channel__list-controller-button channel__list-controller-button--next" type="button" aria-label="Next videos"></button>
         </div>
 
-        <ul class="channel__list">
+        <ul class="channel__list js-channel__list">
         </ul>
       </div>
 
@@ -155,7 +155,7 @@
           <button class="recommended__list-controller-button recommended__list-controller-button--next" type="button" aria-label="Next videos"></button>
         </div>
 
-        <ul class="recommended__list">
+        <ul class="recommended__list js-recommended__list">
         </ul>
       </div>
 
@@ -174,7 +174,7 @@
 
         </div>
 
-        <ul class="channel__list channel__recommended-list">
+        <ul class="channel__list channel__recommended-list js-channel__recommended-list">
         </ul>
       </div>
 
@@ -186,7 +186,7 @@
     <button class="site-footer__settings-button" type="button">Settings</button>
   </footer>
 
-  <template>
+  <template class="top-channel-template">
     <li class="channel__item">
       <button class="channel__watch-later-button" type="button" aria-label="Watch later button">
         <span class="channel__watch-later-text">Watch later</span>
@@ -194,25 +194,25 @@
 
       <a class="channel__link" href="https://youtube.com" target="_blank">
         <div class="channel__demo-wrapper">
-          <span class="channel__demo-time">4:15</span>
-          <img class="channel__demo-img" src="https://picsum.photos/250/150?random=1" alt="A Brief History Of Creation" width="250" height="150">
+          <span class="channel__demo-time js-channel__demo-time">4:15</span>
+          <img class="channel__demo-img js-channel__demo-img" src="img/brief-history.png" alt="A Brief History Of Creation" width="250" height="150" srcset="img/brief-history.png 1x, img/brief-history@2x.png 2x">
         </div>
 
-        <h4 class="channel__item-heading">A Brief History Of Creation</h4>
+        <h4 class="channel__item-heading js-channel__item-heading">A Brief History Of Creation</h4>
 
         <div class="channel__item-info">
           <div class="channel__item-info-left">
-            <p class="channel__item-views">80k views</p>
-            <p class="channel__item-uploaded">3 days ago</p>
+            <p class="channel__item-views js-channel__item-views">80k views</p>
+            <p class="channel__item-uploaded js-channel__item-uploaded">3 days ago</p>
           </div>
 
-          <h4 class="channel__name">Dollie Blair</h4>
+          <h4 class="channel__name js-channel__name">Dollie Blair</h4>
         </div>
       </a>
     </li>
   </template>
 
-  <template>
+  <template class="recommended-template">
     <li class="recommended__item">
       <button class="recommended__watch-later-button" type="button" aria-label="Watch later button">
         <span class="recommended__watch-later-text">Watch later</span>
@@ -220,25 +220,25 @@
 
       <a class="recommended__link" href="https://youtube.com" target="_blank">
         <div class="recommended__demo-wrapper">
-          <span class="recommended__demo-time">4:15</span>
-          <img class="recommended__demo-img" src="https://picsum.photos/540/250?random=5" alt="A Brief History Of Creation" width="540" height="250">
+          <span class="recommended__demo-time js-recommended__demo-time">4:15</span>
+          <img class="recommended__demo-img js-recommended__demo-img" src="img/getting-telescopes.png" alt="A Brief History Of Creation" width="540" height="250" srcset="img/getting-telescopes.png 1x, img/getting-telescopes@2x.png 2x">
         </div>
 
-        <h4 class="recommended__item-heading">Dude You Re Getting A Telescope</h4>
+        <h4 class="recommended__item-heading js-recommended__item-heading">Dude You Re Getting A Telescope</h4>
 
         <div class="recommended__item-info">
           <div class="recommended__item-info-left">
-            <p class="recommended__item-views">34k views</p>
-            <p class="recommended__item-uploaded">5 month ago</p>
+            <p class="recommended__item-views js-recommended__item-views">34k views</p>
+            <p class="recommended__item-uploaded js-recommended__item-uploaded">5 month ago</p>
           </div>
 
-          <h4 class="recommended__name">Gussie French</h4>
+          <h4 class="recommended__name js-recommended__name">Gussie French</h4>
         </div>
       </a>
     </li>
   </template>
 
-  <template>
+  <template class="bottom-channel-template">
     <li class="channel__item">
       <button class="channel__watch-later-button" type="button" aria-label="Watch later button">
         <span class="channel__watch-later-text">Watch later</span>
@@ -246,19 +246,19 @@
 
       <a class="channel__link" href="https://youtube.com" target="_blank">
         <div class="channel__demo-wrapper">
-          <span class="channel__demo-time">4:15</span>
-          <img class="channel__demo-img" src="https://picsum.photos/250/150?random=5" alt="A Brief History Of Creation" width="250" height="150">
+          <span class="channel__demo-time js-channel__demo-time">4:15</span>
+          <img class="channel__demo-img js-channel__demo-img" src="img/astronomy.png" alt="A Brief History Of Creation" width="250" height="150" srcset="img/astronomy.png 1x, img/astronomy@2x.png 2x">
         </div>
 
-        <h4 class="channel__item-heading">A Brief History Of Creation</h4>
+        <h4 class="channel__item-heading js-channel__item-heading">A Brief History Of Creation</h4>
 
         <div class="channel__item-info">
           <div class="channel__item-info-left">
-            <p class="channel__item-views">80k views</p>
-            <p class="channel__item-uploaded">3 days ago</p>
+            <p class="channel__item-views js-channel__item-views">80k views</p>
+            <p class="channel__item-uploaded js-channel__item-uploaded">3 days ago</p>
           </div>
 
-          <h4 class="channel__name">Food & Drink</h4>
+          <h4 class="channel__name js-channel__name">Food & Drink</h4>
         </div>
       </a>
     </li>

@@ -9,9 +9,17 @@
   height: 100vh;
   padding-top: 25px;
   padding-bottom: 150px;
-  padding-left: 66px;
+  padding-left: 0;
   overflow-x: hidden;
   overflow-y: scroll;
+}
+
+.main-content--open .main-content__main-section {
+  padding-left: 66px;
+}
+
+.main-content--open .sitenav {
+  display: flex;
 }
 
 @include breakpoint-down (600) {
