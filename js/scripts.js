@@ -235,7 +235,7 @@ var elTopChannelTemplate = $_('.top-channel-template').content;
 
 var elTopChannelObjectFragment = document.createDocumentFragment();
 
-topChannelObjects.forEach (function (topChannelObject) {
+topChannelObjects.forEach (function (topChannelObject, index) {
   var elTopChannelVideoItem = elTopChannelTemplate.cloneNode(true);
 
   $_('.js-channel__demo-time', elTopChannelVideoItem).textContent = topChannelObject.channelDemoTime;
@@ -248,6 +248,8 @@ topChannelObjects.forEach (function (topChannelObject) {
   $_('.js-channel__item-views', elTopChannelVideoItem).textContent = topChannelObject.channelItemViews;
   $_('.js-channel__item-uploaded', elTopChannelVideoItem).textContent = topChannelObject.channelItemUploaded;
   $_('.js-channel__name', elTopChannelVideoItem).textContent = topChannelObject.channelName;
+  $_('.js-channel__watch-later-button', elTopChannelVideoItem).dataset.id = index;
+
 
   elTopChannelObjectFragment.appendChild(elTopChannelVideoItem);
 });
@@ -301,3 +303,17 @@ bottomChannelObjects.forEach (function (bottomChannelObject) {
 });
 
 $_('.js-channel__recommended-list').appendChild(elBottomChannelObjectFragment);
+
+
+var elTopChannelList = $_('.js-channel__list');
+
+var watchLaterArray = [];
+
+elTopChannelList.addEventListener('click', function (evt) {
+  if (evt.target.matches('.js-channel__watch-later-button')) {
+    watchLaterArray.push(topChannelObjects(evt.target.dataset.id));
+  }
+
+  console.log(watchLaterArray);
+
+});
